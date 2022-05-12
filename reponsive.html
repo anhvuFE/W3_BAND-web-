@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reponsive.css">
+    <title>Reponsive</title>
+    <style>
+      body{
+          display :flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+       h1{
+           font-size: 80px;
+       }      
+       .pc,
+       .tablet,
+       .mobie{
+           font-size: 68px;
+           display: none;
+       }
+/* PC */
+@media(min-width: 1024px ){
+           .pc{
+               display: block;
+           }
+       }
+@media(min-width :740px) and (max-width: 1023px){
+           .tablet{
+               display: block;
+           }
+       }
+@media(max-width: 740px ){
+           .mobie{
+               display: block;
+           }
+       }
+
+/* PC : >= 1024px ;
+   Tablet : 740px<= a <1024px;
+   Mobie : <640px;
+*/
+    </style>
+</head>
+
+<body>
+    <h2 class="pc">PC</h2>
+    <h2 class="tablet">TABLET</h2>
+    <h2 class="mobie">MOBIE</h2>
+</body>
+</html>

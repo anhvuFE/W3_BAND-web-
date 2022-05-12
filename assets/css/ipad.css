@@ -94,7 +94,7 @@ html {
   right: 0;
   height: 46px;
   background-color: #000;
-  z-index: 10000;
+  z-index: 15000;
 }
 
 /* start nav */
@@ -149,6 +149,8 @@ html {
   background-color: #ccc;
 }
 
+/* chưa ẩn được */
+
 #nav .subnav {
   position: absolute;
   background-color: #fff;
@@ -192,7 +194,6 @@ html {
   position: relative;
   margin-top: 46px;
   padding-top: 50%;
-  /* 50% chiều ngang của chính nó */
   background: url("/assets/img/Slider/Slider2.jpg") top center/cover no-repeat;
 }
 
@@ -210,8 +211,8 @@ html {
   margin-top: 25px;
 }
 
-/* #content {
-} */
+#content {
+}
 
  .content-section {
   padding: 64px 0 112px;
@@ -471,8 +472,7 @@ header.modal-header {
 }
 .contact-infor {
   font-size: 18px;
-  text-decoration : inherit;
-  /* Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài). */
+  text-decoration: inherit;
   line-height: 2;
 }
 .contact-infor a{
@@ -563,6 +563,12 @@ text-decoration: none;
 }
 .copyright a{
   color:rgba(0, 0, 0, 0.6); 
+}
+.socials-list{
+  font-size: 28px;
+}
+.socials-list a{
+  margin: 0 8px ;
 }
 
 

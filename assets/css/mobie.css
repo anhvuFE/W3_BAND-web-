@@ -36,11 +36,17 @@ html {
 .btn {
   text-decoration: none;
   color: #fff;
-  background-color: #000;
+  background-color: #009688;
+  /* background-color: #f; */
+
   padding: 11px 16px;
   display: inline-block;
   margin-top: 15px;
   border: none;
+   /* width: 100%; */
+   /* text-align: center;  */
+   margin-bottom: -5px;
+  
   
 }
 .btn:hover {
@@ -64,8 +70,8 @@ html {
 
 .col {
   float: left;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0 8px 10px 8px;
+  
 }
 .col-full {
   width: 100%;
@@ -74,18 +80,22 @@ html {
   width: 50%;
 }
 .col-third {
-  width: 33.33333%;
+  width: 100%;
 }
 .mt-8 {
   margin-top: 8px !important;
 }
 .mt-16 {
-  margin-top: 8px !important;
+  margin-top: 16px !important;
+}
+.mt-32 {
+  margin-top: 32px !important;
 }
 
+
 /* Main */
-#main {
-}
+/* #main {
+} */
 
 #header {
   position: fixed;
@@ -93,8 +103,9 @@ html {
   left: 0;
   right: 0;
   height: 46px;
-  background-color: #000;
+  background-color:#009688;
   z-index: 10000;
+  /* overflow: hidden; */
 }
 
 /* start nav */
@@ -150,7 +161,8 @@ html {
 }
 
 #nav .subnav {
-  position: absolute;
+  /* Trên mobie không cần position */
+  /* position: absolute; */
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: none;
@@ -170,8 +182,15 @@ html {
   font-size: 14px;
 }
 
-/* end nav */
 
+/* end nav */
+#header .mobie-menu-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#header .mobie-menu-btn,
 #header .search-btn {
   float: right;
   padding: 0 21px;
@@ -181,7 +200,14 @@ html {
   background-color: #f44336;
   cursor: pointer;
 }
+#header .mobie-menu-btn:hover{
+  background-color: #ccc;
+}
+#header .mobie-menu-btn:hover .menu-icon{
+  color: #000;
+}
 
+#header .menu-icon,
 #header .search-icon {
   color: #fff;
   font-size: 20px;
@@ -192,7 +218,6 @@ html {
   position: relative;
   margin-top: 46px;
   padding-top: 50%;
-  /* 50% chiều ngang của chính nó */
   background: url("/assets/img/Slider/Slider2.jpg") top center/cover no-repeat;
 }
 
@@ -214,14 +239,13 @@ html {
 } */
 
  .content-section {
-  padding: 64px 0 112px;
+  padding: 64px 0 50px;
   width: 800px;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 16px;
   padding-right: 16px;
-  /* text-align: justify; */
   /* căn giữa */
 }
 
@@ -252,7 +276,7 @@ html {
   /* làm ảnh trong phần about */
 }
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 /* Bỏ đi , thêm class text align center vào bên HTML */
 /* #content .member-item {
@@ -261,7 +285,7 @@ html {
 
  .member-name {
   margin-top: 25px;
-  font-size: 15px;
+  font-size: 20px;
   color: teal;
 }
 
@@ -302,10 +326,10 @@ html {
 
 .tickets-list .quantity {
   float: right;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 33px;
   height: 33px;
-  background-color: aquamarine;
+  background-color: orange;
   text-align: center;
   line-height: 33px;
   margin: -6px;
@@ -339,23 +363,45 @@ opacity: 0.6;
 
 .place-body {
   background-color: #fff;
-  padding: 16px;
+  padding: 10px;
   font-size: 15px;
   color: #000;
+  height: 200px;
+  
+}
+.p-relative{
+  position: relative;
+}
+.p-absolute{
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.place-heading {
+.place-heading{
   font-size: 15px;
   font-weight: 600;
+  color: #009688;
+  text-align: center;
 }
 
 .place-time {
   margin-top: 15px;
   color: #757575;
+  text-align: center;
 }
 
 .place-desc {
   margin-top: 15px;
+  margin-bottom: 100px;
+  /* color: red; */
+  height: 120px;
+  text-align: center;
+  overflow: scroll;
+}
+.place-desc::-webkit-scrollbar {
+  display: none;
 }
 
 /* Modal */
@@ -467,12 +513,12 @@ header.modal-header {
 .contact-content {
   margin-top: 48px;
   /* padding: 0 350px; */
-  padding-right: 50px;
+  /* padding-right: 20px; */
+
 }
 .contact-infor {
-  font-size: 18px;
-  text-decoration : inherit;
-  /* Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài). */
+  font-size: 18px ;
+  text-decoration: inherit;
   line-height: 2;
 }
 .contact-infor a{
@@ -491,6 +537,7 @@ header.modal-header {
   padding: 10px;
   border: 1px #ccc solid;
   width: 100%;
+  
 }
 /* Dùng chung btn nên bỏ đi */
 /* .contact-form .form-submit-btn {
@@ -507,30 +554,34 @@ header.modal-header {
 }
 
 .change {
-  width: 180px;
-  height: 180px;
+  width: 290px;
+  height: 290px;
   margin-top: 15px;
   border-radius: 4px;
 }
 
 .change1 {
-  width: 180px;
-  height: 180px;
+  width: 290px;
+  height: 290px;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .change2 {
-  width: 180px;
-  height: 180px;
+  width: 290px;
+  height: 290px;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .tour1 {
-  width: 250px;
-  height: 200px;
-  margin-top: 15px;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
   border-radius: 5px;
 }
 .changemap{
@@ -563,6 +614,61 @@ text-decoration: none;
 }
 .copyright a{
   color:rgba(0, 0, 0, 0.6); 
+}
+/* PC */
+@media(min-width: 1024px ){
+   
+}
+/* Tablet */
+@media(min-width :740px) and (max-width: 1023px){
+   
+}
+/* Mobie */
+@media(max-width: 740px ){
+  .s-full-width,
+  .s-col-full{
+    width: 100% !important;
+  }
+  .s-mt-8{
+   margin-top: 16px !important;
+  }
+  #header .search-btn{
+    display: none;
+}
+#header {
+  overflow: hidden;
+}
+  #nav{
+    display: block;
+  }
+   #nav > li {
+       display: block;
+   }
+   #nav .subnav{
+     position: initial;
+     background-color:#009688;
+   }
+   #nav .subnav a{
+     color: #fff;
+     padding: 5px 41px;
+   }
+   #nav li a {
+     text-decoration: none;
+     line-height: 46px;
+     padding: 1px 24px;
+     display: block;
+   }
+   .contact-form {
+    margin-top: 16px;
+  }
+  .socials-list{
+    font-size: 28px;
+  }
+  .socials-list a{
+    margin: 0 8px ;
+  }
+
+  
 }
 
 
